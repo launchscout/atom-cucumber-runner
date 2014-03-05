@@ -1,0 +1,20 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Run feature file': 'cucumber-runner:run'
+      'Run cucumber at line': 'cucumber-runner:run-for-line'
+      'Re-Run Last Cuke': 'cucumber-runner:run-last'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Cucumber Runner'
+      'submenu': [
+        { 'label': 'Run All Specs', 'command': 'cucumber-runner:run' }
+        { 'label': 'Run Current Spec', 'command': 'cucumber-runner:run-for-line' }
+        { 'label': 'Re-Run Last Spec', 'command': 'cucumber-runner:run-last' }
+      ]
+    ]
+  }
+]

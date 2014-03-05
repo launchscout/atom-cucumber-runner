@@ -1,0 +1,17 @@
+{
+  "name": "cucumber-runner",
+  "main": "./lib/cucumber-runner",
+  "version": "0.0.0",
+  "description": "Atom Cucumber runner package",
+  "activationEvents": [
+    "cucumber-runner:run",
+    "cucumber-runner:run-for-line",
+    "cucumber-runner:run-last"
+  ],
+  "repository": "https://github.com/gaslight/atom-cucumber-runner",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {}
+}
