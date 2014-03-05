@@ -12,6 +12,6 @@ Add ability to run Cucumber and see the output without leaving Atom.
 
 HotKeys:
 
-- __Ctrl+Alt+K f__ - executes current feature file
-- __Ctrl+Alt+K l__ - executes only the cuke on the line the cursor's at
-- __Ctrl+Alt+E__ - re-executes the last executed cuke
+- __alt+cmd+k__ - executes current feature file
+- __ctrl+cmd+__ - executes only the cuke on the line the cursor's at
+- __ctrl+alt+k__ - re-executes the last executed cuke
