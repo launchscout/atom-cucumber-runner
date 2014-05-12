@@ -3,6 +3,9 @@ url = require 'url'
 CucumberRunnerView = require './cucumber-runner-view'
 
 module.exports =
+  configDefaults:
+    command: "cucumber"
+
   activate: (state) ->
     if state?
       @lastFile = state.lastFile
@@ -31,15 +34,15 @@ module.exports =
     lastFile: @lastFile
     lastLine: @lastLine
 
-  openUriFor: (file, line_number) ->
+  openUriFor: (file, lineNumber) ->
     @lastFile = file
-    @lastLine = line_number
+    @lastLine = lineNumber
 
     previousActivePane = atom.workspace.getActivePane()
     uri = "cucumber-output://#{file}"
     atom.workspace.open(uri, split: 'right', changeFocus: false, searchAllPanes: true).done (cucumberRunnerView) ->
       if cucumberRunnerView instanceof CucumberRunnerView
-        cucumberRunnerView.run(line_number)
+        cucumberRunnerView.run(lineNumber)
         previousActivePane.activate()
 
   runForLine: ->
